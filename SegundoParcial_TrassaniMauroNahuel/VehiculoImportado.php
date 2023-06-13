@@ -39,7 +39,8 @@ class VehiculoImportado extends Vehiculo {
     }
 
  
-    public function darPrecioVentaImportado($valorCalculado) {
+    public function darPrecioVenta() {
+        $valorCalculado = parent::darPrecioVenta(); // Llama al método darPrecioVenta() de la clase padre
         return $valorCalculado + $this->impuestosImportacion;
     }
 }

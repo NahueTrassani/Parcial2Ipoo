@@ -21,12 +21,18 @@ class VehiculoNacional extends Vehiculo {
         }
         
     }
-
+/*
     public function darPrecioVentaNacional($valorCalculado) {
         $descuento = $valorCalculado * ($this->descuentoPorcentaje / 100);
         return $valorCalculado - $descuento;
     }
-
+*/
+    public function darPrecioVenta() {
+        $valorCalculado = parent::darPrecioVenta(); // Llama al método darPrecioVenta() de la clase padre
+        $descuento = $valorCalculado * ($this->descuentoPorcentaje / 100);
+        return $valorCalculado - $descuento;
+    }
+    
     public function __toString() {
         return "Vehículo Nacional\n" .
                "Código: " . $this->getCodigo() . "\n" .

@@ -125,6 +125,7 @@ class Concesionaria {
         //echo "parm2 numero: ".$numDoc."\n";
         $colVentas = [];
         $ventas = $this->getVentas();
+        
         foreach ($ventas as $venta){
             $clientes = $venta->getCliente();
             $docType = $clientes->getTipoDocumento();
